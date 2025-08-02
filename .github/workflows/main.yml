@@ -24,7 +24,7 @@ jobs:
         run: npm install # npm install을 실행할 경로로 설정
 
       - name: Inject .env.production
-        run: echo "VITE_API_URL=${{ secrets.VITE_API_BASE_URL }}" > .env.production
+        run: echo "VITE_API_BASE_URL=${{ secrets.VITE_API_BASE_URL }}" > .env.production
 
       - name: Build # React Build
         run: npm run build # npm run build를 실행할 경로로 설정
